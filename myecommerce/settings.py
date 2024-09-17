@@ -27,6 +27,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
+
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 
@@ -88,7 +89,6 @@ DATABASES = {
 
 database_url = os.environ.get("DATABASE_URL")
 DATABASES['default'] = dj_database_url.parse(database_url)
-# DATABASES['default'] =dj_database_url.parse("postgresql://myecommerce_poor_user:9FlcrIeRSbB6djnz3w9GS9FEbGdpn3Lc@dpg-crkt92u8ii6s7386qqb0-a.oregon-postgres.render.com/myecommerce_poor")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
